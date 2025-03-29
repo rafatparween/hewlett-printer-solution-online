@@ -1,6 +1,6 @@
 'use client';
 
-import Footer from "../Components/Footer";
+// import Footer from "../Components/Footer";
 
 const Home = () => {
     return (
@@ -68,7 +68,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
-        <Footer/>
+        {/* <Footer/> */}
         </>
     );
 };
