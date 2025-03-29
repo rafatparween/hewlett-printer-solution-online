@@ -1,40 +1,24 @@
-"use client"
-import Header from "./components/Header";
-import Slider from "./components/Slider";
-import Content from "./components/Content"
-import NavBar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Customer from "./components/Customer";
-import Technicians from "./components/Technicians";
-import Assistance from "./components/Assistance";
-import Avoid from "./components/Avoid";
-import Helppage from "./components/Helppage";
-import Digonode from "./components/Digonode";
-import JivoChat from "./Jivochat";
+import Image from "next/image";
+import Navbar from "./Components/Navbar";
+import Slider from "./Components/Slider";
+import Header from "./Components/Header";
+import DataContent from "./Components/DataContent";
 
+import Support from "./Components/Support";
+import JivoChat from "./JivoChat";
+import Footer from "./Components/Footer";
 
-
-function Home() {
+export default function Home() {
   return (
     <>
-
-      <NavBar />
-
-      <Slider />
-      <Header />
-      <Content />
-      {/* <Technicians/>
-      <Assistance/>
-      <Digonode/>
-      <Avoid/>
-      <Helppage/> */}
-      <Customer/>
-      <Footer />
+      <Navbar/>
+      <Slider/>
+      {/* <Header/> */}
+      <Support/>
+      <DataContent/>
+      <Footer/>
       <JivoChat/>
-
-
+     
     </>
-
-  )
+  );
 }
-export default Home;

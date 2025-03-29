@@ -1,83 +1,70 @@
-"use client";
-import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faPercent, faLifeRing, faUser, faCartShopping } from "@fortawesome/free-solid-svg-icons";
+"use client"
+import React from 'react';
 import Link from 'next/link';
-import Image from "next/image";
 
-const NavBar = () => {
+const Navbar = () => {
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 w-full h-20 p-4 shadow-lg bg-white flex items-center justify-between md:h-16 lg:h-20 overflow-hidden ">
-      
-      {/* Logo */}
-      <div className="flex items-center pl-4 md:pl-8">
-      <Link legacyBehavior href="#">
-          <a>
-            <Image
-              className="text-[50px] "
-              src="/ezlogo.jpg"
-              height={95}
-              width={95}
-              alt="Logo"
+    <header className="bg-white shadow-md fixed w-full z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          <div className="flex items-center">
+            <Link legacyBehavior href="/">
+              <a className="text-2xl font-bold text-blue-600">
+              Hewlett Printer Solution Online
+              </a>
+            </Link>
+          </div>
+          <div className="hidden lg:flex lg:items-center lg:space-x-8">
+            <Link legacyBehavior href="/">
+              <a className="text-lg text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md transition duration-300">
+                Home
+              </a>
+            </Link>
+            <Link legacyBehavior href="/about">
+              <a className="text-lg text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md transition duration-300">
+                About
+              </a>
+            </Link>
+            <Link legacyBehavior href="/service">
+              <a className="text-lg text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md transition duration-300">
+                Service
+              </a>
+            </Link>
+            <Link legacyBehavior href="/Disclaimer">
+              <a className="text-lg text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md transition duration-300">
+                Disclaimer
+              </a>
+            </Link>
+            <Link legacyBehavior href="/policy">
+              <a className="text-lg text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md transition duration-300">
+                PrivacyPolicy
+              </a>
+            </Link>
+          </div>
+          <div className="hidden lg:flex items-center space-x-4">
+            <input
+              type="text"
+              className="border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              placeholder="Search..."
             />
-          </a>
-        </Link>
-        <Link legacyBehavior href="#">
-          <a className="text-[27px] text-[#0C71C3]">Ez-tech</a>
-        </Link>
-      </div>
-      
-      {/* Search Bar */}
-      <div className="flex-grow px-4">
-        <div className="relative max-w-lg mx-auto">
-          <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-            <FontAwesomeIcon className="text-gray-500" icon={faSearch} />
-          </span>
-          <input
-            type="text"
-            placeholder="Search"
-            className="w-[762px] h-10 pl-10 pr-4 border border-gray-300 rounded-lg focus:outline-none"
-          />
+          </div>
+          <div className="lg:hidden">
+            {/* Mobile menu button */}
+            <button className="text-gray-700 hover:text-blue-600 focus:outline-none">
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
-
-      {/* Navigation Links */}
-      <div className="flex items-center space-x-4 pr-4 md:pr-8">
-        <div className="flex items-center space-x-2">
-          <FontAwesomeIcon className="w-5 h-5" icon={faPercent} />
-          <span className="hidden md:inline-block">
-            <Link legacyBehavior href="./components/projects">
-              <a className="text-black no-underline">My Projects</a>
-            </Link>
-          </span>
-        </div>
-        <div className="flex items-center space-x-2">
-          <FontAwesomeIcon className="w-5 h-5" icon={faLifeRing} />
-          <span className="hidden md:inline-block">
-            <Link legacyBehavior href="./components/help">
-              <a className="text-black no-underline">Help is here</a>
-            </Link>
-          </span>
-        </div>
-        <div className="flex items-center space-x-2">
-          <FontAwesomeIcon className="w-5 h-5" icon={faUser} />
-          <span className="hidden md:inline-block">
-            <Link legacyBehavior href="./components/signup">
-              <a className="text-black no-underline">Sign in</a>
-            </Link>
-          </span>
-        </div>
-        <div className="flex items-center space-x-2">
-          <FontAwesomeIcon className="w-5 h-5" icon={faCartShopping} />
-          <span className="hidden md:inline-block">
-            <Link legacyBehavior href="/carts">
-              <a className="text-black no-underline">Cart</a>
-            </Link>
-          </span>
-        </div>
-      </div>
-    </div>
+    </header>
   );
 };
 
-export default NavBar;
+export default Navbar;

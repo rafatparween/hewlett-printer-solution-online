@@ -35,6 +35,13 @@ body {
 	animation:blink 7s linear infinite;
 }
 
+.button:hover{
+	background:linear-gradient(90deg,#50e3fc,#03a9f4,#0ff0fc,#007DBA);
+	background-size: 500%;
+	z-index:1;
+	animation:blink 7s linear infinite;
+}
+
 @keyframes blink{
 	from{
 		background-position: 0%;
@@ -110,15 +117,6 @@ body {
   .install:hover::after {
 	opacity: 1;
 	z-index: -1; /* Send the blurred background behind */
-  }
-
-
-  @font-face {
-	font-family: "HPSimplifiedLight123";
-	src: url('/fonts/HPSimplifiedLight123.woff2') format('woff2'),
-		 url('/fonts/HPSimplifiedLight123.woff') format('woff');
-	font-weight: normal; /* Adjust if you have different weights */
-	font-style: normal; /* Adjust if you have italic or oblique styles */
   }
 
  

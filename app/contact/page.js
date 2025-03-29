@@ -1,7 +1,10 @@
 'use client';
 
+import Footer from "../Components/Footer";
+
 const Home = () => {
     return (
+        <>
         <div className="bg-white p-10">
             {/* Popular Questions Section */}
             <div className="mb-16">
@@ -14,7 +17,7 @@ const Home = () => {
                         "What if I'm not happy with my purchase?",
                         'Can you help me edit or fix the design of my product?',
                         'Can I change my order?',
-                        'My Hewlett Hub Solutions Account',
+                        'My EzTech Printer Solutions Account',
                         "My order hasn't arrived, what can I do?",
                         'Can I cancel my order?',
                         'What are your shipping speeds?'
@@ -43,7 +46,7 @@ const Home = () => {
                     <div>
                         <p className="text-lg font-bold">Email</p>
                         <p className="text-sm text-gray-500 mb-4">Customer service specialists respond to emails from Monday – Saturday.</p>
-                        <p className="mb-4">Our email is <a href="mailto:customerservice@hewletthubsolutions.com" className="text-blue-600">customerservice@hewletthubsolutions.com</a> or you can email us directly here.</p>
+                        <p className="mb-4">Our email is <a href="mailto:customerservice@eztechprintersolutions.com" className="text-blue-600">customerservice@eztechprintersolutions.com</a> or you can email us directly here.</p>
                         <button className="bg-black text-white py-2 px-4 rounded-md">Email us</button>
                     </div>
                 </div>
@@ -51,7 +54,7 @@ const Home = () => {
                 {/* Browse Help Centre Section */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                        <h4 className="text-lg font-bold mb-4">Designing with Hewlett Hub Solutions</h4>
+                        <h4 className="text-lg font-bold mb-4">Designing with EzTech Printer Solutions</h4>
                         {['Designing my calendar', 'Getting started with design studio'].map((item, index) => (
                             <p key={index} className="mb-4 border-b border-gray-300 pb-2">{item}</p>
                         ))}
@@ -65,6 +68,8 @@ const Home = () => {
                 </div>
             </div>
         </div>
+        <Footer/>
+        </>
     );
 };
 
