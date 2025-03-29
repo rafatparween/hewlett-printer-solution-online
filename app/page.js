@@ -1,21 +1,22 @@
-
-
-
-
 import DataContent from "./Components/DataContent";
-
-import Support from "./Components/Support";
-import JivoChat from "./JivoChat";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Slider from "./Components/Slider";
+import Support from "./Components/Support";
+import JivoChat from "./JivoChat";
 
 export default function Home() {
   return (
     <>
+      {/* <Navbar/>
+      <Slider/>
+     
+      <Support/>
+      <DataContent/>
+      <Footer/>
+      <JivoChat/> */}
       <Navbar/>
       <Slider/>
-      {/* <Header/> */}
       <Support/>
       <DataContent/>
       <Footer/>
